@@ -9,6 +9,7 @@ A macOS menubar app to control Home Assistant entities from your desktop. Perfec
 - Visual feedback on action success/failure
 - Launch at login support
 - Configuration stored securely outside the app
+- Universal binary supporting both Intel and Apple Silicon Macs
 
 ## Requirements
 
@@ -18,16 +19,34 @@ A macOS menubar app to control Home Assistant entities from your desktop. Perfec
 
 ## Installation
 
-### Option 1: Build from source
+### Download Pre-built App
+
+1. Download the latest `DeskMate.dmg` from [Releases](https://github.com/gargs/DeskMateApp/releases)
+2. Open the DMG and drag `DeskMate.app` to the Applications folder
+3. Launch DeskMate from Applications
+
+#### First Launch (Gatekeeper Warning)
+
+Since the app isn't notarized by Apple, you'll see a security warning on first launch. To open it:
+
+**Method 1: Right-click to open**
+1. Right-click (or Control-click) on `DeskMate.app` in Applications
+2. Select **"Open"** from the menu
+3. Click **"Open"** in the dialog
+
+**Method 2: Terminal command**
+```bash
+xattr -cr /Applications/DeskMate.app
+open /Applications/DeskMate.app
+```
+
+This only needs to be done once. After that, you can open the app normally.
+
+### Build from Source
 
 1. Clone this repository
 2. Open `DeskMate.xcodeproj` in Xcode
 3. Build and run (⌘R)
-
-### Option 2: Use pre-built app
-
-1. Download the latest release
-2. Move `DeskMate.app` to `/Applications`
 
 ## Configuration
 
